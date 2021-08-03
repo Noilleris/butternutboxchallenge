@@ -1,21 +1,21 @@
 module Formatter
   module PhoneNumber
     module UK
-      def normilize(number)
-        '+447123456789'
+      COUNTRY_CODE = '+44'.freeze
+
+      def normalize(number)
+        number.gsub(/(\()|(\))|(\-)|(\s)/i, '')
       end
 
       def validate(number)
-        '+447123456789'
+        number.gsub(/((^0)|(^\+?44))/, '')
       end
 
       def self.format(number)
-        normal_number = normilize(number)
-
-        validate(normal_number)
+        COUNTRY_CODE + validate(normalize(number))
       end
 
-      module_function :normilize, :validate
+      module_function :normalize, :validate
     end
   end
 end

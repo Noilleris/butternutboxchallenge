@@ -38,7 +38,7 @@ If validate function not raised an error we returning its result in the format f
 We also have to introduce three custom exceptions 
 
 ```ruby
-BadNumber, WrongCountry and WrongLength
+BadNumber, WrongCountry, WrongLength, NotANumber, NilNumber, EmptyNumber
 ```
 
 # Tests

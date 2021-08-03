@@ -38,7 +38,7 @@ If validate function not raised an error we returning its result in the format f
 We also have to introduce three custom exceptions 
 
 ```ruby
-BadNumber, WrongCountry, WrongLength, NotANumber, NilNumber, EmptyNumber
+BadNumber, NilNumber, EmptyNumber
 ```
 
 # Tests
@@ -64,3 +64,4 @@ ruby test_formatter.rb
 # Thoughts
 
 I always have concerns about using regex as they are hard to maintain and read.
+Number of exceptions could be increased.

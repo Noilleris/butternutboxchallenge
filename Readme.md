@@ -1,3 +1,17 @@
+# General
+
+Coding challenge for ButternutBox. Implementation of a small module for phone number formatter for UK phones.
+
+# Files
+
+- ``formatter.rb`` - implementation
+- ``test_formatter.rb`` - tests
+- ``Gemfile`` - required packages
+
+# Dependencies
+
+minitest
+
 # Analysis
 
 Let us see what we could do here. We have numbers in three possible formats:
@@ -25,10 +39,7 @@ After it has been normalized we have to validate the number:
 
 ```ruby
 def validate(number)
-	# check number against [\+0-9] pattern to be sure it is number not a random string and throw exception(BadNumber)
-	# check the length and throw an exception(WrongLength) if the length is not between 11 to 13 
-	# check prefix to be in ['07', '447', '+447'] and thrown an exception(WrongCountry)
-	# ommit prefix and validate number's length to be 9, throw an exception(WrongLength)
+	# number being checked against regexp to see if it is valid or not, for invalid numbers BadNumber raised
 	# return number with +44 prefix
 end
 ```
